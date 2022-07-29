@@ -10,10 +10,22 @@
 }
 string[] FunctionSelectedElement(string[] inputArray)
 {
-    int CountInElements(string elements)
+    bool CountInElements(string elements)
     {
         int lengthElements = elements.Length;
-        if (lengthElements <= 3) return 1;
-        else return 0;
+        if (lengthElements <= 3) return true;
+        else return false;
     }
+    string CountElements(string[] array)
+    {
+
+        int result = 0;
+        int length = array.Length;
+        for (int i = 0; i < length; i++)
+            if (CountInElements(array[i])) 
+                result++;
+        string stringResult = Convert.ToString(result);
+        return stringResult;
+    }
+
 }
