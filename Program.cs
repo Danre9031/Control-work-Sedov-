@@ -1,4 +1,13 @@
-﻿string[] GetData(string path)
+﻿string[] a = GetData("inputdata.txt");
+
+string input = Print(a);
+File.WriteAllText("input.txt", input);
+
+string[] b = FunctionSelectedElement(a);
+string output = Print(b);
+File.WriteAllText("output.txt", output);
+
+string[] GetData(string path)
 {
     string[] res = File.ReadAllText(path)
       .Split(new char[] { ' ' }
