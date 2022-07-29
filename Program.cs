@@ -27,5 +27,4 @@ string[] FunctionSelectedElement(string[] inputArray)
         string stringResult = Convert.ToString(result);
         return stringResult;
     }
-
 }
