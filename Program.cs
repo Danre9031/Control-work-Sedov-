@@ -27,4 +27,18 @@ string[] FunctionSelectedElement(string[] inputArray)
         string stringResult = Convert.ToString(result);
         return stringResult;
     }
+    string[] outputArray = new string[Convert.ToInt32(CountElements(inputArray))];
+    int count = inputArray.Length;
+    int index = 0;
+    int i = 0;
+    while (i < count)
+    {
+        if (CountInElements(inputArray[i]))
+        {
+            outputArray[index] = inputArray[i];
+            index = index + 1;
+        }
+        i = i + 1;
+    }
+    return outputArray;
 }
